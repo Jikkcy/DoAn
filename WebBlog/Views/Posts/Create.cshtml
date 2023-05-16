@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="page-content">
+    <div class="post-container">
+        <form action="#" method="post" class="md-box" enctype="multipart/form-data">
+            <h1 class="center form-title">Create Post</h1>
+            <div class="input-group">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" class="input-control" />
+                </div>
+                <div class="container p-0">
+                        <label for="post-editor">Content</label>
+                    <div class="tinymce">
+                        <textarea id="tiny"></textarea>
+                    </div>
+                </div>
+                <div class="post-details">
+                    <div class="select-topic-wrapper">
+                        <div class="input-group">
+                            <label for="topic">Topic</label>
+                        </div>
+                        <select name="topic_id" id="topic" class="input-control">
+                            <option></option>
+                            <option value="Forest">Forest</option>
+                            <option value="Ocean">Ocean</option>
+                            <option value="City">City</option>
+                        </select>
+                    </div>
+                    <div class="image-wrapper">
+                        <input type="file" name="image" id="" class="hide image-input pt-3" />
+                        <button type="button" class="bg-image">
+                            <span>
+                                <ion-icon name="image-outline" class="image-outline"></ion-icon>
+                                <span>Choose image</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="input-group">
+                        <label for="published">
+                            <input type="checkbox" name="published" id="published" />
+                            publish
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btn btn-primary btn-lg">SAVE</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.tiny.cloud/1/cxnd3g5pjn87oa9ny3ahdsskzdywhnif2uwz49ydta4t7n4f/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({
+        selector: 'textarea#tiny'
+    });</script>
+
